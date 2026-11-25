@@ -25,7 +25,7 @@ Each video goes through three steps. The bot waits for your OK at every step.
 
 - You share a transcript (or the bot makes one with ffmpeg audio extract and faster-whisper) and the source video, plus what you want: topic, speaker, how many clips, audience.
 - It picks self-contained 40-60s clips (70s hard max) that open on a full, no-context sentence, make one point, and end on a strong line.
-- You get a Google Doc cut list (in/out times, length, opening words, notes) plus the top 3 picks in chat, then you choose which to make.
+- The Cut List Google Doc starts with a bold summary (clip count, total runtime, transcription notes) and a bold Top 3 line, then one table: # | In → Out | Length | Opens on | Why it works / notes, with ⚠ on 60-70s clips. After the table, a Clip transcripts section has each clip's full word-for-word text under its own `#N Title` heading, with host questions left out and `[cut]` marking internal cuts. You also get the top 3 in chat, then you choose which to make.
 
 ### Step 2: Copy
 
