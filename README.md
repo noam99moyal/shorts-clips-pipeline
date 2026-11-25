@@ -13,8 +13,6 @@ First-run checklist:
 - A voice or style file for titles and descriptions, or the default voice
 - Caption rules (defaults shown; change anything you want)
 - YouTube Studio sign-in in the bot's own browser, through a screen handoff. Never send a password in chat.
-- Optional read-only YouTube access through Composio, used to read and verify videos and find already-scheduled slots (otherwise it verifies in Studio)
-- Channel name and handle confirmation, playlist (or none), category (28 Science & Technology or 22 People & Blogs are common fits), and timezone
 
 Connectors: Google Drive, Google Docs, Google Sheets, and Composio.
 
@@ -25,7 +23,7 @@ Each video goes through three steps. The bot waits for your OK at every step.
 ### Step 1: Moments
 
 - You share a transcript (or the bot makes one with ffmpeg audio extract and faster-whisper) and the source video, plus what you want: topic, speaker, how many clips, audience.
-- It picks self-contained 40-60s clips (70s hard max after speed-up) that open on a full, no-context sentence, make one point, and end on a strong line. No invented quotes or timestamps.
+- It picks self-contained 40-60s clips (70s hard max) that open on a full, no-context sentence, make one point, and end on a strong line. No invented quotes or timestamps.
 - You get a Google Doc cut list (in/out times, length, opening words, notes) plus the top 3 picks in chat, then you choose which to make.
 
 ### Step 2: Copy
@@ -42,7 +40,7 @@ Each video goes through three steps. The bot waits for your OK at every step.
 ### Step 3: Scheduling
 
 - Starts only when you say "schedule". It suggests a cadence, avoids double-booking by checking existing scheduled uploads and the `<Channel> Shorts Schedule Log` sheet, and shows a plan for your yes.
-- In YouTube Studio, each `YT-` file is uploaded with the copy-doc title and description, category, "not made for kids", playlist, and Visibility > Schedule. Never Public or Publish now. Drafts are finished, not duplicated.
+- In YouTube Studio, each `YT-` file is uploaded with the copy-doc title and description, category, "not made for kids", playlist, and Visibility > Schedule. Never Public or Publish now.
 - After verify and log, headings are renamed `#N`, and you get a report: clip, title, link, and publish time in your timezone.
 
 ### Defaults and safety
