@@ -1,15 +1,16 @@
 # Shorts Clips Pipeline
 
-Shorts Clips Pipeline is a Grok Bot that turns one long video into captioned, scheduled YouTube Shorts. It stops for your OK at every step, and nothing posts until you say "schedule". It is not tied to any brand or channel; you choose the Drive folder, voice, captions, and YouTube account.
+Shorts Clips Pipeline is a Grok Bot that turns one long video into captioned, scheduled YouTube Shorts. 
+It stops for your OK at every step, and nothing posts until you say "schedule". You choose the Drive folder, voice, captions, and YouTube account.
 
 ## Install
 
-1. Open the Grok Bot template: [Shorts Clips Pipeline on x.ai](https://x.ai/bot/VVNtVcHR3nZOLsKlPkH8g)
+1. Open the Grok Bot template: [Shorts Clips Pipeline](https://x.ai/bot/VVNtVcHR3nZOLsKlPkH8g)
 2. Open the new agent chat and finish first-run setup. The bot asks these once and saves your answers.
 
 First-run checklist:
 
-- A Google Drive folder for cut lists, copy docs, clips, and the schedule log (confirmed with a path and link, used only after your yes)
+- A Google Drive folder for cut lists, copy docs, clips, and the schedule log (confirmed with a path and link)
 - A voice or style file for titles and descriptions, or the default voice
 - Caption rules (defaults shown; change anything you want)
 - YouTube Studio sign-in in the bot's own browser, through a screen handoff. Never send a password in chat.
@@ -23,7 +24,7 @@ Each video goes through three steps. The bot waits for your OK at every step.
 ### Step 1: Moments
 
 - You share a transcript (or the bot makes one with ffmpeg audio extract and faster-whisper) and the source video, plus what you want: topic, speaker, how many clips, audience.
-- It picks self-contained 40-60s clips (70s hard max) that open on a full, no-context sentence, make one point, and end on a strong line. No invented quotes or timestamps.
+- It picks self-contained 40-60s clips (70s hard max) that open on a full, no-context sentence, make one point, and end on a strong line.
 - You get a Google Doc cut list (in/out times, length, opening words, notes) plus the top 3 picks in chat, then you choose which to make.
 
 ### Step 2: Copy
